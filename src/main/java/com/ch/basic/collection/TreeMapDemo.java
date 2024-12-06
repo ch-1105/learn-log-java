@@ -204,7 +204,7 @@ public class TreeMapDemo {
         System.out.println("High scores (>=90): " + filtered);
 
         // 转换值
-        TreeMap<String, String> grades = new TreeMap<>(map.entrySet().stream()
+        TreeMap<String, String> grades = new TreeMap<>((Comparator) map.entrySet().stream()
                 .collect(Collectors.toMap(
                     Map.Entry::getKey,
                     e -> convertToGrade(e.getValue()),

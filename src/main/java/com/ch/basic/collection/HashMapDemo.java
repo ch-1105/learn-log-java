@@ -482,7 +482,7 @@ public class HashMapDemo {
         CountDownLatch latch = new CountDownLatch(threadCount * 2);
 
         // 测试synchronizedMap
-        startTime = System.nanoTime();
+        long startTime = System.nanoTime();
         for (int i = 0; i < threadCount; i++) {
             new Thread(() -> {
                 for (int j = 0; j < operationsPerThread; j++) {
@@ -585,9 +585,9 @@ public class HashMapDemo {
         }
 
         try {
-            for (String key : testMap.keySet()) {
-                if (key.equals("Key5")) {
-                    testMap.remove(key);
+            for (String tempKey : testMap.keySet()) {
+                if (tempKey.equals("Key5")) {
+                    testMap.remove(tempKey);
                 }
             }
         } catch (ConcurrentModificationException e) {
