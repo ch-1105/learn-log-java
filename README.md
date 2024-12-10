@@ -1,55 +1,142 @@
-# Java Learning Project
+# Java Core Technology Learning Path
 
-This project is a comprehensive Java learning resource focusing on concurrent programming and collections framework.
+A comprehensive Java learning project covering core technologies, concurrency, collections, and JVM internals.
 
-## Project Structure
+## 🎯 Learning Tracks
+
+### 1. Java Virtual Machine (JVM)
+- **Architecture**
+  - JVM Components
+  - Runtime Data Areas
+  - Execution Engine
+  
+- **Memory Management**
+  - Memory Model (JMM)
+  - Object Memory Layout
+  - Memory Leaks Prevention
+  
+- **Class Loading**
+  - Loading Process
+  - ClassLoader Hierarchy
+  - Custom ClassLoaders
+  - Common Issues & Solutions
+  
+- **Garbage Collection**
+  - Modern GC Algorithms
+  - GC Tuning
+  - Performance Monitoring
+
+### 2. Concurrency Programming
+- **Thread Management**
+  - Thread Lifecycle
+  - Thread Pool Patterns
+  - ThreadLocal Usage
+  
+- **Synchronization**
+  - Locks and Monitors
+  - Atomic Operations
+  - Volatile Variables
+  
+- **Concurrent Collections**
+  - ConcurrentHashMap
+  - BlockingQueue
+  - CopyOnWriteArrayList
+
+### 3. Collections Framework
+- **Core Collections**
+  - List, Set, Map Implementations
+  - Performance Characteristics
+  - Usage Patterns
+  
+- **Algorithms**
+  - Sorting
+  - Searching
+  - Custom Comparators
+
+## 📚 Project Structure
 
 ```
 src/
 ├── main/
 │   ├── java/
 │   │   └── com/
-│   │       └── example/
-│   │           └── thread/
-│   │               ├── ThreadPoolDemo.java
-│   │               └── ThreadPoolPractical.java
-│   └── resources/
-│       └── logback.xml
-└── test/
-    └── java/
-        └── com/
-            └── example/
-                └── thread/
+│   │       └── ch/
+│   │           ├── basic/
+│   │           │   ├── jvm/
+│   │           │   │   ├── doc/         # JVM Documentation
+│   │           │   │   └── example/     # JVM Examples
+│   │           │   ├── thread/          # Concurrency
+│   │           │   └── collection/      # Collections
+│   │           └── advanced/            # Advanced Topics
 ```
 
-## Features
+## 🛠️ Technical Stack
 
-- Thread Pool Examples
-- Concurrent Programming Patterns
-- Practical Use Cases
-- Performance Monitoring
-- Exception Handling
+- **Java Version**: 17+ LTS
+- **Build Tool**: Maven
+- **Testing**: JUnit 5
+- **Logging**: SLF4J + Logback
+- **IDE**: IntelliJ IDEA
 
-## Prerequisites
+## 🚀 Getting Started
 
-- Java 8 or higher
-- Maven 3.6 or higher
-- IDE (IntelliJ IDEA recommended)
+1. **Prerequisites**
+   ```bash
+   Java 17+
+   Maven 3.6+
+   ```
 
-## Getting Started
+2. **Build**
+   ```bash
+   mvn clean install
+   ```
 
-1. Clone the repository
-2. Open the project in your IDE
-3. Run `mvn clean install` to build the project
-4. Run the examples:
-   - `ThreadPoolDemo.java` - Basic thread pool examples
-   - `ThreadPoolPractical.java` - Practical thread pool application
+3. **Run Examples**
+   ```bash
+   # JVM Examples
+   java -XX:+UseG1GC com.ch.basic.jvm.example.GCDemo
+   
+   # Concurrency Examples
+   java com.ch.basic.thread.example.ThreadPoolExample
+   ```
 
-## Documentation
+## 📖 Documentation
 
-- Check the source code comments for detailed explanations
-- Refer to the markdown files in the docs directory for concepts and best practices
+Each topic includes:
+- Markdown documentation explaining concepts
+- Practical code examples
+- Common pitfalls and solutions
+- Performance considerations
+- Interview preparation materials
 
-## Contributing
+## 🎓 Learning Path Progress
 
-Feel free to submit issues and enhancement requests!
+- [x] JVM Architecture
+- [x] Memory Management
+- [x] Class Loading
+- [x] Garbage Collection
+- [x] Thread Fundamentals
+- [x] Synchronization
+- [x] Collections Basics
+- [ ] Advanced Concurrency
+- [ ] Performance Tuning
+- [ ] Microservices Patterns
+
+## 📈 Performance Monitoring
+
+- JVM GC Monitoring
+- Thread Pool Metrics
+- Memory Usage Analysis
+- Class Loading Statistics
+
+## 🤝 Contributing
+
+Feel free to:
+- Submit issues
+- Propose new features
+- Add documentation
+- Share your learning experience
+
+## 📝 License
+
+This project is licensed under the MIT License.
